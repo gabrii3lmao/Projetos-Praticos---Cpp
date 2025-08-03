@@ -2,9 +2,6 @@
 #include <iostream>
 #include <random>
 using namespace std;
-
-
-
 void start() {
 	std::cout << "===========================\n\n";
 	std::cout << "    QUIZ MUITO LEGAL\n\n";
