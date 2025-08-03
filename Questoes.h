@@ -11,10 +11,10 @@ void start() {
 	std::cout << "===========================\n\n";
 }
 
-//Questões de Matemática
+//QuestÃµes de MatemÃ¡tica
 int matQ1() {
 	int resp;
-	cout << "Quais são as raízes da função: x² + 2x + 4? \n\n";
+	cout << "Quais sÃ£o as raÃ­zes da funÃ§Ã£o: xÂ² + 2x + 4? \n\n";
 	cout << "1. x1 = 5 / x2 = 3\n";
 	cout << "2. x1 = 2/ x2 = 4\n";
 	cout << "3. x1 = -2 / x2 = -4\n";
@@ -27,7 +27,7 @@ int matQ1() {
 	case 2: cout << "\nResposta errada!\n"; break;
 	case 3: cout << "\nResposta errada!\n"; break;
 	case 4: cout << "\nResposta certa!\n"; break;
-	default: cout << "\nDigite uma resposta válida!\n";
+	default: cout << "\nDigite uma resposta vÃ¡lida!\n";
 		break;
 	}
 	return resp;
@@ -35,9 +35,9 @@ int matQ1() {
 
 int matQ2() {
 	int resp;
-	cout << "Dirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação e absorção do álcool depender de cada pessoa e de como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool (C) no sangue corresponde a aproximadamente 90% da quantidade (q) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas.\n";
+	cout << "Dirigir apÃ³s ingerir bebidas alcoÃ³licas Ã© uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa jÃ¡ comeÃ§a a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminaÃ§Ã£o e absorÃ§Ã£o do Ã¡lcool depender de cada pessoa e de como o organismo consegue metabolizar a substÃ¢ncia, ao final da primeira hora apÃ³s a ingestÃ£o, a concentraÃ§Ã£o de Ã¡lcool (C) no sangue corresponde a aproximadamente 90% da quantidade (q) de Ã¡lcool ingerida, e a eliminaÃ§Ã£o total dessa concentraÃ§Ã£o pode demorar atÃ© 12 horas.\n";
 
-	cout << "Nessas condições, ao final da primeira hora após a ingestão da quantidade q de álcool, a concentração C dessa substância no sangue é expressa algebricamente por\n\n";
+	cout << "Nessas condiÃ§Ãµes, ao final da primeira hora apÃ³s a ingestÃ£o da quantidade q de Ã¡lcool, a concentraÃ§Ã£o C dessa substÃ¢ncia no sangue Ã© expressa algebricamente por\n\n";
 
 	cout << "1. C = 0,9q\n";
 	cout << "2. C = 0,1q\n";
@@ -51,14 +51,14 @@ int matQ2() {
 	case 2: cout << "\nResposta errada!\n"; break;
 	case 3: cout << "\nResposta errada!\n"; break;
 	case 4: cout << "\nResposta errada!\n"; break;
-	default: cout << "\nDigite uma resposta válida!\n";
+	default: cout << "\nDigite uma resposta vÃ¡lida!\n";
 		break;
 	}
 	return resp;
 }
 int matQ3() {
 	int resp;
-	cout << "Quantos números de 3 algarismos distintos podemos formar usando os dígitos 1, 2, 3, 4 e 5?\n\n";
+	cout << "Quantos nÃºmeros de 3 algarismos distintos podemos formar usando os dÃ­gitos 1, 2, 3, 4 e 5?\n\n";
 	cout << "1. 24\n";
 	cout << "2. 6\n";
 	cout << "3. 120\n";
@@ -71,7 +71,7 @@ int matQ3() {
 	case 2: cout << "\nResposta certa!\n"; break;
 	case 3: cout << "\nResposta errada!\n"; break;
 	case 4: cout << "\nResposta errada!\n"; break;
-	default: cout << "\nDigite uma resposta válida!\n";
+	default: cout << "\nDigite uma resposta vÃ¡lida!\n";
 		break;
 	}
 	return resp;
@@ -79,7 +79,7 @@ int matQ3() {
 
 int matQ4() {
 	int resp;
-	cout << "Quantas senhas de 4 dígitos podem ser formadas usando os algarismos de 0 a 9, sem repetir dígitos?\n";
+	cout << "Quantas senhas de 4 dÃ­gitos podem ser formadas usando os algarismos de 0 a 9, sem repetir dÃ­gitos?\n";
 	cout << "1. 125\n";
 	cout << "2. 1000\n";
 	cout << "3. 5040\n";
@@ -92,7 +92,7 @@ int matQ4() {
 	case 2: cout << "\nResposta errada!\n"; break;
 	case 3: cout << "\nResposta certa!\n"; break;
 	case 4: cout << "\nResposta errada!\n"; break;
-	default: cout << "\nDigite uma resposta válida!\n";
+	default: cout << "\nDigite uma resposta vÃ¡lida!\n";
 		break;
 	}
 	return resp;
@@ -115,14 +115,14 @@ void funcAleatorizadora() {
 	int randomNumber = distrib(gen);
 	if (randomNumber == 1)
 	{
-		matQ1(); //funcao da 1° questao
+		matQ1(); //funcao da 1Â° questao
 	}
 	else if (randomNumber == 2)
 	{
-		matQ2();
+		matQ2(); // 2Â° questÃ£o
 	}
 	else if (randomNumber == 3) {
-		matQ3();
+		matQ3(); // 3Â° questÃ£o
 	}
 
 	else
