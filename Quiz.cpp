@@ -13,11 +13,12 @@ int main() {
 
 	switch (materias())
 	{
-		case 1:  
+		case 1:
+			bool continuar;
 		do
 		{
-			system("cls");  funcAleatorizadoraMat();
-		} while (true); break;
+			system("cls"); startMat(); continuar = funcAleatorizadoraMat();
+		} while (continuar == 1); break;
 	case 2: std::cout << "Tem nada aqui não rapaz\n"; break;
 	case 3: std::cout << "Tem nada aqui também não, rapaz\n"; break;
 	default:
