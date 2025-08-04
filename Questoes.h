@@ -11,6 +11,12 @@ void start() {
 	std::cout << "===========================\n\n";
 }
 
+void startMat() {
+	std::cout << "=============================\n\n";
+	std::cout << "   PERGUNTAS DE MATEMÁTICA\n\n";
+	std::cout << "=============================\n\n";
+}
+
 int materias() {
 	int resposta;
 	std::cout << "Qual matéria você quer selecionar?\n\n";
@@ -31,7 +37,7 @@ int matQ1() {
 	cout << "2. x1 = 2/ x2 = 4\n";
 	cout << "3. x1 = -2 / x2 = -4\n";
 	cout << "4. x1 = 2 / x2 = -4\n";
-	cout << "\nSua resposta: ";
+	cout << "\n\nSua resposta: ";
 	cin >> resp;
 	switch (resp)
 	{
@@ -39,7 +45,7 @@ int matQ1() {
 	case 2: cout << "\nResposta errada!\n"; break;
 	case 3: cout << "\nResposta errada!\n"; break;
 	case 4: cout << "\nResposta certa!\n"; break;
-	default: cout << "\nDigite uma resposta válida!\n";
+	default: cout << "\n\nDigite uma resposta válida!\n";
 		break;
 	}
 	return resp;
@@ -55,7 +61,7 @@ int matQ2() {
 	cout << "2. C = 0,1q\n";
 	cout << "3. C = 1 - 0,1q\n";
 	cout << "4. C = 1 - o,9q\n";
-	cout << "\nSua resposta: ";
+	cout << "\n\nSua resposta: ";
 	cin >> resp;
 	switch (resp)
 	{
@@ -63,7 +69,7 @@ int matQ2() {
 	case 2: cout << "\nResposta errada!\n"; break;
 	case 3: cout << "\nResposta errada!\n"; break;
 	case 4: cout << "\nResposta errada!\n"; break;
-	default: cout << "\nDigite uma resposta válida!\n";
+	default: cout << "\n\nDigite uma resposta válida!\n";
 		break;
 	}
 	return resp;
@@ -75,7 +81,7 @@ int matQ3() {
 	cout << "2. 60\n";
 	cout << "3. 120\n";
 	cout << "4. 50\n";
-	cout << "\nSua resposta: ";
+	cout << "\n\nSua resposta: ";
 	cin >> resp;
 	switch (resp)
 	{
@@ -83,7 +89,7 @@ int matQ3() {
 	case 2: cout << "\nResposta certa!\n"; break;
 	case 3: cout << "\nResposta errada!\n"; break;
 	case 4: cout << "\nResposta errada!\n"; break;
-	default: cout << "\nDigite uma resposta válida!\n";
+	default: cout << "\n\nDigite uma resposta válida!\n";
 		break;
 	}
 	return resp;
@@ -98,7 +104,7 @@ int matQ4() {
 	cout << "3. 5040\n";
 	cout << "4. 7200\n";
 	cout << "0. Sair";
-	cout << "\nSua resposta: ";
+	cout << "\n\nSua resposta: ";
 	cin >> resp;
 	switch (resp)
 	{
@@ -107,7 +113,7 @@ int matQ4() {
 	case 3: cout << "\nResposta certa!\n"; break;
 	case 4: cout << "\nResposta errada!\n"; break;
 	case 0: cout << "Saindo..."; exit = true; break;
-	default: cout << "\nDigite uma resposta válida!\n";
+	default: cout << "\n\nDigite uma resposta válida!\n";
 		break;
 	}
 	return resp;
@@ -115,11 +121,11 @@ int matQ4() {
 
 
 void funcFodase (){
-	cout << "Foi aleatorizado KKKKKKKKKKKKKKKKK";
+	cout << "\nFoi aleatorizado KKKKKKKKKKKKKKKKK\n\n";
 
 }
 
-void funcAleatorizadoraMat() {
+bool funcAleatorizadoraMat() {
 	std::random_device rd;
 	std::mt19937 gen(rd());
 
@@ -127,24 +133,21 @@ void funcAleatorizadoraMat() {
 
 	// Gerador de RNG Mat
 	int randomNumber = distrib(gen);
-	if (randomNumber == 1)
+	switch (randomNumber)
 	{
-		matQ1(); //funcao da 1° questao
+	case 1: matQ1(); break;
+	case 2: matQ2(); break;
+	case 3: matQ3(); break;
+	case 4: matQ4(); break;
+	default: funcFodase(); break;
 	}
-	else if (randomNumber == 2)
-	{
-		matQ2();
-	}
-	else if (randomNumber == 3) {
-		matQ3();
-	}
-	else if (randomNumber == 4) {
-		matQ4();
-	}
-	else
-	{
-		funcFodase(); //teste foda
-	}
+	int opcao;
+	cout << "\nVocê deseja sair?\n";
+	cout << "0. Sair\n";
+	cout << "1. Continuar\n";
+	cout << "\n\nSua resposta: ";
+	cin >> opcao;
+	return (opcao);
 }
 
 void funcAleatorizadoraQuim() {
@@ -157,11 +160,5 @@ void funcAleatorizadoraQuim() {
 	int randomNumber = distrib(gen);
 
 
-
-}
-
-bool exit() {
-	
-}
 
 }
