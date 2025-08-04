@@ -3,14 +3,26 @@
 #include <random>
 #include "Questoes.h"
 
-//falta fazer a desgraça do menu onde o usuário vai escolher a matéria. 
-//NÃO SE ESQUECER DE FAZER O LAÇO DE REPETIÇÃO INFINITO PRO MENU
 
 int main() {
+
 	setlocale(LC_ALL, "");
 	using namespace std;
+	
+	start();
 
-	start(); // cabeçalho 
-	funcAleatorizadora(); // onde uma Questão aleatória vai ser chamada 
+	switch (materias())
+	{
+		case 1:  
+		do
+		{
+			system("cls");  funcAleatorizadoraMat();
+		} while (true); break;
+	case 2: std::cout << "Tem nada aqui não rapaz\n"; break;
+	case 3: std::cout << "Tem nada aqui também não, rapaz\n"; break;
+	default:
+		break;
+	}
+	
 	return 0;
 }
