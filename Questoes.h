@@ -2,10 +2,25 @@
 #include <iostream>
 #include <random>
 using namespace std;
+
+
+
 void start() {
 	std::cout << "===========================\n\n";
 	std::cout << "    QUIZ MUITO LEGAL\n\n";
 	std::cout << "===========================\n\n";
+}
+
+int materias() {
+	int resposta;
+	std::cout << "Qual matéria você quer selecionar?\n\n";
+	std::cout << "1. Matemática\n";
+	std::cout << "2. Quimica\n";
+	std::cout << "3. Programação\n";
+	std::cout << "Sua resposta: ";
+	std::cin >> resposta;
+	
+	return resposta;
 }
 
 //Questões de Matemática
@@ -57,7 +72,7 @@ int matQ3() {
 	int resp;
 	cout << "Quantos números de 3 algarismos distintos podemos formar usando os dígitos 1, 2, 3, 4 e 5?\n\n";
 	cout << "1. 24\n";
-	cout << "2. 6\n";
+	cout << "2. 60\n";
 	cout << "3. 120\n";
 	cout << "4. 50\n";
 	cout << "\nSua resposta: ";
@@ -75,12 +90,14 @@ int matQ3() {
 }
 
 int matQ4() {
+	bool exit = false;
 	int resp;
 	cout << "Quantas senhas de 4 dígitos podem ser formadas usando os algarismos de 0 a 9, sem repetir dígitos?\n";
 	cout << "1. 125\n";
 	cout << "2. 1000\n";
 	cout << "3. 5040\n";
 	cout << "4. 7200\n";
+	cout << "0. Sair";
 	cout << "\nSua resposta: ";
 	cin >> resp;
 	switch (resp)
@@ -89,11 +106,11 @@ int matQ4() {
 	case 2: cout << "\nResposta errada!\n"; break;
 	case 3: cout << "\nResposta certa!\n"; break;
 	case 4: cout << "\nResposta errada!\n"; break;
+	case 0: cout << "Saindo..."; exit = true; break;
 	default: cout << "\nDigite uma resposta válida!\n";
 		break;
 	}
 	return resp;
-	
 }
 
 
@@ -102,13 +119,13 @@ void funcFodase (){
 
 }
 
-void funcAleatorizadora() {
+void funcAleatorizadoraMat() {
 	std::random_device rd;
 	std::mt19937 gen(rd());
 
 	std::uniform_int_distribution<> distrib(1, 6); //vai de 1 a 6
 
-	// Gerador de RNG
+	// Gerador de RNG Mat
 	int randomNumber = distrib(gen);
 	if (randomNumber == 1)
 	{
@@ -116,14 +133,35 @@ void funcAleatorizadora() {
 	}
 	else if (randomNumber == 2)
 	{
-		matQ2(); // 2° questão
+		matQ2();
 	}
 	else if (randomNumber == 3) {
-		matQ3(); // 3° questão
+		matQ3();
 	}
-
+	else if (randomNumber == 4) {
+		matQ4();
+	}
 	else
 	{
 		funcFodase(); //teste foda
 	}
+}
+
+void funcAleatorizadoraQuim() {
+	std::random_device rd;
+	std::mt19937 gen(rd());
+
+	std::uniform_int_distribution<> distrib(1, 6); //vai de 1 a 6
+
+	// Gerador de RNG Mat
+	int randomNumber = distrib(gen);
+
+
+
+}
+
+bool exit() {
+	
+}
+
 }
