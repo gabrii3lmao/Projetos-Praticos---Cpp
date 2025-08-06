@@ -20,6 +20,7 @@ void startQuim() {
 	std::cout << "   PERGUNTAS DE QUIMICA\n\n";
 	std::cout << "=============================\n\n";
 }
+// Seletor de matéria 
 int materias() {
 	int resposta;
 	std::cout << "Qual matéria você quer selecionar?\n\n";
@@ -33,6 +34,7 @@ int materias() {
 }
 
 //Questões de Matemática
+
  int matQ1() {
 	int resp;
 	std::cout << "1. x1 = 5 / x2 = 3\n";
@@ -74,6 +76,7 @@ int matQ2() {
 	}
 	return resp;
 }
+
 int matQ3() {
 	int resp;
 	std::cout << "Quantos números de 3 algarismos distintos podemos formar usando os dígitos 1, 2, 3, 4 e 5\n\n";
@@ -115,6 +118,7 @@ int matQ4() {
 	}
 	return resp;
 }
+
 int matQ5() {
 	int resp;
 	std::cout << "Qual é a média dos seguintes números: 5, 10, 15, 20, 25?\n";
@@ -135,6 +139,7 @@ int matQ5() {
 	}
 	return resp;
 }
+
 int matQ6() {
 	int resp;
 	std::cout << "Em uma loja, um produto que custava R$ 200,00 teve um desconto de 15%. Qual o valor final do produto?\n";
@@ -154,12 +159,6 @@ int matQ6() {
 		break;
 	}
 	return resp;
-}
-
-
-void funcFodase ()
-{
-	std::cout << "\nFoi aleatorizado KKKKKKKKKKKKKKKKK\n\n";
 }
 
 bool funcAleatorizadoraMat() {
@@ -191,6 +190,7 @@ bool funcAleatorizadoraMat() {
 
 
 //questões de quimica
+
 int quimQ1() {
 	int resposta;
 	std::cout << "Qual das alternativas apresenta um elemento químico do grupo dos metais alcalinos?\n\n";
@@ -210,6 +210,7 @@ int quimQ1() {
 	}
 		return resposta;
 }
+
 int quimQ2() {
 	int resposta;
 	std::cout << "A passagem do estado sólido diretamente para o gasoso é chamada de: \n\n";
@@ -229,6 +230,7 @@ int quimQ2() {
 	}
 		return resposta;
 }
+
 int quimQ3() {
 	int resposta;
 	std::cout << "Uma reação exotérmica é aquela que: \n\n";
@@ -248,6 +250,7 @@ int quimQ3() {
 	}
 		return resposta;
 }
+
 bool funcAleatorizadoraQuim() {
 	std::random_device rd;
 	std::mt19937 gen(rd());
