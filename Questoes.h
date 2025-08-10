@@ -37,11 +37,11 @@ int materias() {
 
  int matQ1() {
 	int resp;
+	std::cout << "Quais são as raízes da função: x² + 2x + 4? \n\n";
 	std::cout << "1. x1 = 5 / x2 = 3\n";
 	std::cout << "2. x1 = 2/ x2 = 4\n";
 	std::cout << "3. x1 = -2 / x2 = -4\n";
 	std::cout << "4. x1 = 2 / x2 = -4\n";
-	std::cout << "Quais são as raízes da função: x² + 2x + 4? \n\n";
 	std::cout << "\n\nSua resposta: ";
 	std::cin >> resp;
 	switch (resp)
